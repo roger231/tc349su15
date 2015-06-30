@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 1000px;
+  background: #232323;
+}
+div {
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+  font-weight: 100;
+}
+p {
+  color: rgba(255,255,255,1);
+  font-family: 'Poiret One', cursive;
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: cover; /*change to absolute for bottom description*/
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.hide-click  .hide-click {
+	opacity: 0;
+}
+
+.show-description small {
+  opacity: 1;
+  font-size: medium;
+}
+
+.Affordance{
+  background-image: url("https://c1.staticflickr.com/1/524/19290423661_61cff72073_z.jpg");
+}
+.Mapping{
+  background-image: url("https://c1.staticflickr.com/1/431/19098905938_3a8a4edeb7_z.jpg");
+}
+.Chunking{
+  background-image: url("https://c1.staticflickr.com/1/463/18663990714_9c12ff11d6_z.jpg");
+}
+.Signal2Noise{
+  background-image: url("https://c1.staticflickr.com/1/366/19280488432_3e6068af6f_z.jpg");
+}
+.HicksLaw{
+  background-image: url("https://c1.staticflickr.com/1/537/19260409526_367901600e_z.jpg");
+}
+
+
+.description {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Design Principles in the Wild</h1>
+<h2>Anthony Rogers</h2>
+<div class="Affordance">
+  <p>Affordance <span class="hide-click">(click to expand)</span><span class="description">ign.com</span><br />
+<small>The element of "door usability" is evident on the webpage thanks to the arrows indicating how to change the pictures in the slideshow</small></p>
+</div>
+
+<div class="Mapping">
+  <p>Mapping <span class="hide-click">(click to expand)</span><span class="description">D2L Class Page</span><br />
+<small>The positioning of the check boxes as well as having the progress bar above them indicates that by checking the boxes, the progress bar will increase.</small></p>
+</div>
+  
+<div class="Chunking">
+  <p>Chunking <span class="hide-click">(click to expand)</span><span class="description">Apple Macbook Charging Description</span><br />
+  <small>Apple places all the information needed within 100-200px. This allows for the user to read the info without having to scan across the entire screen.</small></p>
+</div>
+
+<div class="Signal2Noise">
+  <p>Signal-to-Noise <span class="hide-click">(click to expand)</span><span class="description">Apple Macbook Screen Description</span><br />
+  <small>Every pixel that is not white has relevant information on the screen size and resolution of the new Macbook. White space is used without the addition of ads in the margins. </small></p>
+</div>
+
+<div class="HicksLaw">
+  <p>Hick's Law <span class="hide-click">(click to expand)</span><span class="description">Instagram Web App</span><br />
+  <small>The Instagram Web App has a menu bar that only contains 3 options. Log Out, Profile, and the homepage. This significantly decreases the users decisions on where to go on the website. </small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  $('div').on('click', function() {
+      $(this).toggleClass('hide-click');
+  });
+</script>
+
+</body>
